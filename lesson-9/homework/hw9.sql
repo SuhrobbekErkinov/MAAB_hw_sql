@@ -44,11 +44,11 @@ from cte;
 
 -- task 3
 ;with cte as (
-    select 1 as n, 1 as Fibonacci_Number
+    select 1 as n, 0 as prev,1 as Fibonacci_Number
     union all 
-    select n+1, Fibonacci_Number+n+1
+    select n+1, Fibonacci_Number, Fibonacci_Number+prev
     from cte
     where n<10
 )
-select * 
+select n, Fibonacci_Number
 from cte;
