@@ -2,7 +2,7 @@ create database hw13;
 go
 use hw13;
 
-DECLARE @date DATE = GETDATE(); -- or set a custom date
+DECLARE @date DATE = GETDATE(); -- or set a custom date: '2025-05-24'
 DECLARE @startOfMonth DATE = DATEFROMPARTS(YEAR(@date), MONTH(@date), 1);
 DECLARE @endOfMonth DATE = EOMONTH(@date);
 
